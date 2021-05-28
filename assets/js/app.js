@@ -140,10 +140,11 @@ let footer = $(`
         <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
           <div class="form-style-6">
             <h6 class="display">Get in Touch</h6>
-            <form>
-              <input type="text" name="field1" placeholder="Your Name" />
-              <input type="email" name="field2" placeholder="Email Address" />
-              <textarea name="field3" placeholder="Type your Message"></textarea>
+            <form name="contact" method="POST" data-netlify="true"  >
+            <input type="hidden" name="form-name" value="contact" />
+              <input type="text" name="name" placeholder="Your Name" />
+              <input type="email" name="email" placeholder="Email Address" />
+              <textarea name="message" placeholder="Type your Message"></textarea>
               <input type="submit" value="Send" />
             </form>
           </div>
@@ -153,8 +154,6 @@ let footer = $(`
   </div>
 </footer>
 `);
-
-
 
 // Window Loads
 $(function () {
